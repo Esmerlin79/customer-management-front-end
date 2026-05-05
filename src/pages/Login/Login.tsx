@@ -26,7 +26,7 @@ export const Login = () => {
   const location = useLocation();
   const { user, status, error } = useAppSelector((s) => s.auth);
 
-  const [email, setEmail] = useState('admin@oriontek.do');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [localError, setLocalError] = useState<string | null>(null);
@@ -225,22 +225,6 @@ export const Login = () => {
             </Stack>
           </Box>
 
-          <Box
-            sx={{
-              mt: 4,
-              p: 2,
-              borderRadius: 2,
-              backgroundColor: colors.backgroundSecondary,
-              border: `1px dashed ${colors.border}`,
-            }}
-          >
-            <Typography variant="caption" sx={{ display: 'block', fontWeight: 600, mb: 0.5 }}>
-              Credenciales de demo
-            </Typography>
-            <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>
-              admin@oriontek.do / OrionTek2026!
-            </Typography>
-          </Box>
         </Paper>
       </Box>
     </Box>
